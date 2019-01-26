@@ -23,23 +23,3 @@ class Main(Source):
         cvelist.sort(key=operator.attrgetter('id'))
 
         return cvelist
-
-"""
-def getcvelist():
-    Source("debian", None, None, "debian/json")
-    data = json.load(open('data/debian'))
-    cvelist = []
-
-    for pkg, value in data.items():
-        for cveid, svalue in value.items():
-                if cveid.startswith("CVE-"): #We don't really care about 'TEMP-'s
-                    cvelist.append(CVE(str(cveid), str(pkg), str(svalue.get('description'))))
-
-    import operator
-    cvelist.sort(key=operator.attrgetter('id'))
-
-    for value in cvelist:
-        print("debian: %s: %s: %s" % (value.id, value.pkg, value.desc))
-
-    return cvelist
-"""
