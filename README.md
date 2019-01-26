@@ -6,7 +6,7 @@ My first python project, so probably very messy.
 
 
 # Usage
-`./python3 main.py -s debian -s redhat -fi`
+`python3 ./main.py -s debian -s redhat -fi`
 
 -s specifies the 'source' of the data, -f to fetch the data from its url,
 -i to import to sql
