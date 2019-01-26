@@ -24,7 +24,7 @@ and Redhat's bugzilla. MITRE and others are on the TODO list as well.
 
 
 # Adding sources
-If you wish to add additional data sources, it should be as easy as using 
+If you wish to add additional data sources, it should be as easy as using
 the following template, and dropping it in `sources/somename/main.py`:
 
 ```
@@ -32,9 +32,10 @@ class Main(Source):
         def __init__(self, src="somename", url=None, path="data/somename", cves=None):
                 super().__init__(src, url, path, cves)
         def Get(self):
-                # Whatever code to parse the data
+                # Whatever code to parse and the data
 ```
-See `sources/common.py` for the Source class. 
+See `sources/skel/main.py for an example template, and `sources/common.py`
+for the Source class.
 
 
 This, again, being my first project in python, may be subject to breakage whenever
