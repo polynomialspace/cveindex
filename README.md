@@ -12,7 +12,7 @@ My first python project, so probably very messy.
 -i to import to sql
 
 Currently there are only 2 sources provided, from debian's
-[security-tracker][1] and redhat's [Securty Data API][2].
+[security-tracker][1] and redhat's [Security Data API][2].
 
 Both tend to be outdated from what Debian and Redhat *actually* have.
 I plan to write additial modules to fetch from debian's [source data][3]
