@@ -34,7 +34,7 @@ class Main(Source):
         def Get(self):
                 # Whatever code to parse and the data
 ```
-See `sources/skel/main.py for an example template, and `sources/common.py`
+See `sources/skel/main.py` for an example template, and `sources/common.py`
 for the Source class.
 
 
