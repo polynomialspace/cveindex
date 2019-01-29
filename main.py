@@ -19,14 +19,14 @@ def ImportData(sources, dbname):
         print("%s: Importing data from '%s' to '%s'."% (source.src, source.path, dbname))
         cur.execute(
         """
-        DROP TABLE IF EXISTS %s;
+        DROP TABLE IF EXISTS "%s";
         """%
         (source.src)
         )
 
         cur.execute(
         """
-        CREATE TABLE IF NOT EXISTS %s (
+        CREATE TABLE IF NOT EXISTS "%s" (
         id      INTEGER  PRIMARY KEY  AUTOINCREMENT,
         cveid   VARCHAR  NOT NULL,
         package VARCHAR,
@@ -40,7 +40,7 @@ def ImportData(sources, dbname):
             #print("ID:%s\nPKG:%s\nDSC:%s\n" % (cve.id, cve.pkg, cve.desc))
             cur.execute(
              """
-             INSERT INTO %s VALUES(NULL, ?, ?, ?)
+             INSERT INTO "%s" VALUES(NULL, ?, ?, ?)
              """%(source.src),
              (cve.id, cve.pkg, cve.desc)
             )
