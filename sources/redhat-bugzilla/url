@@ -1,0 +1,4 @@
+https://bugzilla.redhat.com/buglist.cgi?alias=CVE-2016-&alias_type=substring&columnlist=product%2Ccomponent%2Cbug_status%2Copendate%2Cshort_short_desc%2Calias&human=1&limit=0&query_format=advanced&ctype=csv&human=1
+https://bugzilla.redhat.com/buglist.cgi?alias=CVE-2017-&alias_type=substring&columnlist=product%2Ccomponent%2Cbug_status%2Copendate%2Cshort_short_desc%2Calias&human=1&limit=0&query_format=advanced&ctype=csv&human=1
+https://bugzilla.redhat.com/buglist.cgi?alias=CVE-2018-&alias_type=substring&columnlist=product%2Ccomponent%2Cbug_status%2Copendate%2Cshort_short_desc%2Calias&human=1&limit=0&query_format=advanced&ctype=csv&human=1
+https://bugzilla.redhat.com/buglist.cgi?alias=CVE-2019-&alias_type=substring&columnlist=product%2Ccomponent%2Cbug_status%2Copendate%2Cshort_short_desc%2Calias&human=1&limit=0&query_format=advanced&ctype=csv&human=1
