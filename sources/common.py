@@ -1,8 +1,8 @@
 class CVE(object):
-    def __init__(self, id=None, pkg=None, desc=None):
-        self.id   = id
-        self.pkg  = pkg
+    def __init__(self, cveid=None, pkg=None, desc=None):
+        self.pkg = pkg
         self.desc = desc
+        self.cveid = cveid
 
 class Source(object):
     def __init__(self, src=None, url=None, path=None, cves=None):

@@ -4,7 +4,7 @@ import re
 from sources.common import *
 from pprint import pprint
 
-class Main(Source):
+class main(Source):
     def __init__(self, src="redhat", url=None, path="data/redhat", cves=None):
         super().__init__(src, url, path, cves)
 
@@ -20,6 +20,6 @@ class Main(Source):
             #cvelist.append(CVE(key.get, pkg, svalue.get('description')))
 
         import operator
-        cvelist.sort(key=operator.attrgetter('id'))
+        cvelist.sort(key=operator.attrgetter('cveid'))
 
         return cvelist

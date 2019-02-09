@@ -2,7 +2,7 @@
 import csv
 from sources.common import *
 
-class Main(Source):
+class main(Source):
     def __init__(self, src="gentoo", url=None, path=None, cves=None):
         super().__init__(src, url, path, cves)
 
@@ -26,5 +26,5 @@ class Main(Source):
 
 
         #for entry in cvelist:
-        #    print("%s: %s: %s"% (entry.id, entry.pkg, entry.desc))
+        #    print("%s: %s: %s"% (entry.cveid, entry.pkg, entry.desc))
         return cvelist

@@ -2,7 +2,7 @@
 import csv
 from sources.common import *
 
-class Main(Source):
+class main(Source):
     def __init__(self, src="mitre", url=None, path=None, cves=None):
         super().__init__(src, url, path, cves)
 

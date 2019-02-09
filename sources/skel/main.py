@@ -2,7 +2,7 @@
 from sources.common import *
 
 # Dummy object to template from
-class Main(Source):
+class main(Source):
     def __init__(self, src="skel", url=None, path=None, cves=None):
         super().__init__(src, url, path, cves)
 

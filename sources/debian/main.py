@@ -4,7 +4,7 @@ import re
 from sources.common import *
 from pprint import pprint
 
-class Main(Source):
+class main(Source):
     def __init__(self, src="debian", url=None, path="data/debian", cves=None):
         super().__init__(src, url, path, cves)
 
@@ -16,10 +16,10 @@ class Main(Source):
         for pkg, value in data.items():
             for cveid, svalue in value.items():
                     if cveid.startswith("CVE-"): #We don't really care about 'TEMP-'s
-                        cvelist.append(CVE(str(cveid), 
+                        cvelist.append(CVE(str(cveid),
                          str(pkg), str(svalue.get('description'))))
 
         import operator
-        cvelist.sort(key=operator.attrgetter('id'))
+        cvelist.sort(key=operator.attrgetter('cveid'))
 
         return cvelist
