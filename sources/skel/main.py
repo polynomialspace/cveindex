@@ -2,11 +2,11 @@
 from sources.common import *
 
 # Dummy object to template from
-class main(Source):
+class Main(Source):
     def __init__(self, src="skel", url=None, path=None, cves=None):
         super().__init__(src, url, path, cves)
 
-    def Get(self):
+    def get(self):
         path    = self.path
         data    = open(path).read()
         cvelist = []
@@ -18,7 +18,7 @@ class main(Source):
 
     # Write dummy data since we have no real data to fetch
     # You probably don't need to redefine this in an actual module
-    def Fetch(self, url=None, path=None):
+    def fetch(self, url=None, path=None):
         path = self.path
 
         data = open(path, 'wb')

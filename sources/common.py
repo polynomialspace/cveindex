@@ -6,24 +6,24 @@ class CVE(object):
 
 class Source(object):
     def __init__(self, src=None, url=None, path=None, cves=None):
-        self.src  = src
+        self.src = src
 
-        if url == None:
+        if url is None:
             url = open("sources/%s/url"%(src)).read().strip('\n')
         self.url = url
 
-        if path == None:
+        if path is None:
             path = "data/%s"%(src)
         self.path = path
 
         self.cves = CVE(cves)
 
-    def Fetch(self, url=None, path=None):
+    def fetch(self, url=None, path=None):
         import requests
 
-        if url == None:
+        if url is None:
             url = self.url
-        if path == None:
+        if path is None:
             path = self.path
 
         data = open(path, 'wb')
@@ -31,5 +31,5 @@ class Source(object):
         data.write(content)
         data.close()
 
-    def Get(self):
-        None
+    def get(self):
+        _ = self

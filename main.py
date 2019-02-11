@@ -3,8 +3,8 @@ import sys
 
 def fetchdata(sources):
     for source in sources:
-        print("%s: Fetching from '%s' to '%s'." % (source.src, source.url, source.path))
-        source.Fetch()
+        print("%s: fetching from '%s' to '%s'." % (source.src, source.url, source.path))
+        source.fetch()
 
 
 def importdata(sources, dbname):
@@ -35,7 +35,7 @@ def importdata(sources, dbname):
             (source.src)
         )
 
-        for cve in source.Get():
+        for cve in source.get():
             #print("ID:%s\nPKG:%s\nDSC:%s\n" % (cve.id, cve.pkg, cve.desc))
             cur.execute(
                 """
@@ -75,7 +75,7 @@ def main(argv):
 
     try:
         opts, arg = getopt.getopt(argv, "fis:")
-    except getopt.GetoptError:
+    except getopt.getoptError:
         print("")
         sys.exit(2)
 
@@ -85,7 +85,7 @@ def main(argv):
         elif opt == '-i':
             imprt = True
         elif opt == '-s':
-            sources.append(importlib.import_module("sources.%s.main"%arg).main())
+            sources.append(importlib.import_module("sources.%s.main"%arg).Main())
 
     if fetch:
         fetchdata(sources)

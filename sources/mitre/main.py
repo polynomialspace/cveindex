@@ -2,14 +2,14 @@
 import csv
 from sources.common import *
 
-class main(Source):
+class Main(Source):
     def __init__(self, src="mitre", url=None, path=None, cves=None):
         super().__init__(src, url, path, cves)
 
-    def Get(self):
-        path    = self.path
+    def get(self):
+        path = self.path
         # This should maybe be converted to DictReader?
-        data    = csv.reader(open(path, encoding="ISO-8859-1")) # 😶 😶 😶
+        data = csv.reader(open(path, encoding="ISO-8859-1")) # 😶 😶 😶
         cvelist = []
 
         for row in data:
