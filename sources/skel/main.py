@@ -8,7 +8,7 @@ class Main(Source):
 
     def get(self):
         path    = self.path
-        data    = open(path).read()
+        data    = open(path, encoding='utf-8').read()
         cvelist = []
 
         d1, d2, d3 = data.split()

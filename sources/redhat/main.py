@@ -9,7 +9,7 @@ class Main(Source):
 
     def get(self):
         path = self.path
-        data = json.load(open(path))
+        data = json.load(open(path, encoding='utf-8'))
         cvelist = []
 
         for entry in data:

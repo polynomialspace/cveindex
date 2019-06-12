@@ -8,7 +8,7 @@ class Main(Source):
 
     def get(self):
         path    = self.path
-        data    = csv.DictReader(open(path))
+        data    = csv.DictReader(open(path, encoding='utf-8'))
         cvelist = []
 
         for row in data:
