@@ -12,6 +12,7 @@ class Main(Source):
         data = csv.reader(open(path, encoding="ISO-8859-1")) # 😶 😶 😶
         cvelist = []
 
+        next(data)
         for row in data:
             if row[0].startswith("CVE"):
                 if not row[2].startswith("** RESERVED **"):
